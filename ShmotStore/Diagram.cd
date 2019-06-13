@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ShmotStore.Models.ShopContext">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAQAAAAAAAAAAAAAEAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\ShopContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.Size">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Size.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.Product">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAQAgBAQAAAAAAAQAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.Order">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.Category">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.CartViewModel">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\CartViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Models.Cart">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAgAAAAAAEAAAIBAAAAAA=</HashCode>
+      <FileName>Models\Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.CartController">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAEAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CartController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.CategoriesController">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\CategoriesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.CheckoutController">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAA=</HashCode>
+      <FileName>Controllers\CheckoutController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.OrdersController">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAAACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\OrdersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.SizesController">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACARAACAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\SizesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShmotStore.Controllers.ProductsController">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBRAACAAAAAAAAAAAEAAEACAAEAAAAAACA=</HashCode>
+      <FileName>Controllers\ProductsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ShmotStore.Models.Sex">
+    <Position X="1.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Models\Sex.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ShmotStore.Models.OrderStatus">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAgAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

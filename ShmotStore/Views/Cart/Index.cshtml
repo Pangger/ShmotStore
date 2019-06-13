@@ -1,0 +1,40 @@
+﻿@using ShmotStore.Models
+@model CartViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@if (Model.Products == null || Model.Products.Count == 0)
+{
+    <p>Корзина пуста</p>
+}
+else
+{
+    using (@Html.BeginForm())
+    {
+        <table class="table">
+            <tr>
+                <th>Товар</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+            </tr>
+            @foreach (var product in Model.Products)
+            {
+                <tr>
+                    <td>@product.Key.Name</td>
+                    <td>@product.Key.Price</td>
+                    <td><input type="number" name="quantity" value="@product.Value" /></td>
+                    <td>@(product.Key.Price * product.Value)</td>
+                    <td>@Html.ActionLink("Delete Item", "DeleteItem", new { id = product.Key.ProductId })</td>
+                </tr>
+            }
+
+        </table>
+        <p>Итого: @Model.CartTotal()</p>
+        @Html.ActionLink("Update Cart", "UpdateCart")
+        <p><a href="~/Checkout/Index">Оформить покупку</a></p>
+    }
+}
