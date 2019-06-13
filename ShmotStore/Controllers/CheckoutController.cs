@@ -27,17 +27,22 @@ namespace ShmotStore.Controllers
             Order order = new Order();
             order.OrderTime = DateTime.Now;
             Cart cart = (Cart)Session["cart"];
-            var products = cart.GetProdcts();
-            if(products != null)
+            var cartProducts = cart.GetProdcts();
+            int[] productsId = new int[cartProducts.Count];
+            for (int i = 0; i < productsId.Length; i++)
             {
-                foreach(var product in products)
-                {
-                    order.Products.Add(product);
-                }
+                productsId[i] = cartProducts[i].ProductId;
+            }
+
+            foreach (var product in db.Products.Where(p => productsId.Contains(p.ProductId)))
+            {
+                order.Products.Add(product);
             }
             order.UserId = User.Identity.GetUserId();
+            Session["cart"] = null;
 
             db.Orders.Add(order);
+            
             db.SaveChanges();
 
             return Redirect("Thanks");

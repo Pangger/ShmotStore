@@ -14,7 +14,7 @@ namespace ShmotStore.Models
         public Sex Sex { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<Size> Sizes { get; set; }
-        public ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
         public Product()
         {
             Categories = new List<Category>();

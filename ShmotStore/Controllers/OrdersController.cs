@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using ShmotStore.Models;
+using Microsoft.AspNet.Identity;
 
 namespace ShmotStore.Controllers
 {
@@ -15,12 +16,16 @@ namespace ShmotStore.Controllers
         private ShopContext db = new ShopContext();
 
         // GET: Orders
-        public ActionResult Index(string userId)
+        public ActionResult Index()
         {
-            //IQueryable<Order> orders = db.Orders;
-            var orders = db.Orders.OrderByDescending(o => o.OrderTime).ToList();
+            IQueryable<Order> orders = db.Orders;
+            string userId = User.Identity.GetUserId();
+            if (!User.IsInRole("admin"))
+            {
+                orders = db.Orders.Where(o => o.UserId == userId);
+            }
 
-            return View(orders);
+            return View(orders.OrderByDescending(o => o.OrderTime).ToList());
         }
 
         // GET: Orders/Details/5

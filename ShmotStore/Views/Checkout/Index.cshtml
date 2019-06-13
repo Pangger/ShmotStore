@@ -4,23 +4,25 @@
     ViewBag.Title = "Index";
 }
 
-<table class="table">
-    <tr>
-        <th>Товар</th>
-        <th>Цена</th>
-        <th>Количество</th>
-        <th>Сумма</th>
-    </tr>
-    @foreach (var product in Model.Products)
-    {
+@using (Html.BeginForm())
+{
+
+    <table class="table">
         <tr>
-            <td>@product.Key.Name</td>
-            <td>@product.Key.Price</td>
-            <td><input type="number" name="quantity" value="@product.Value" /></td>
-            <td>@(product.Key.Price * product.Value)</td>
+            <th>Товар</th>
+            <th>Цена</th>
+            <th></th>
+            <th></th>
         </tr>
-    }
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
 
-</table>
-@Html.ActionLink("Оформить покупку", "Buy")
+    </table>
+    @Html.ActionLink("Оформить покупку", "Buy")
 
+}

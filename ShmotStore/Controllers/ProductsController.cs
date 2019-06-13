@@ -17,7 +17,7 @@ namespace ShmotStore.Controllers
         static Cart cart = new Cart();
 
         // GET: Products
-        public ActionResult Index(string sortType)
+        public ActionResult Index(string sortType = "nameSort")
         {
             IQueryable<Product> products = db.Products;
 
@@ -154,7 +154,7 @@ namespace ShmotStore.Controllers
             return View(product);
         }
         
-        [Authorize(Roles = "user, admin")]
+        [Authorize(Roles = "user")]
         public ActionResult AddToCart(int id, int quantity = 1)
         {
             var product = db.Products.Find(id);
